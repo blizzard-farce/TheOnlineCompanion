@@ -1,0 +1,35 @@
+	user		character			npc			character_class_r			class			skill			character_skill_r			feat				feat_character_r					equipment					weapon			character_equipment_r				armor		language				character_language_r			
+user_id	0	character_id	1	2	character_id	1	2	character_id	1	1	class_id	1	2	skill_id	1	2	character_id	1	1	feat_id	1	2	3	feat_id	1	2	3	1	equipment_id	1	2	3	4	equipment_id	1	2	character_id	1	1	1	armor_id	1	language_id	1	2	3	character_id	1	1	1	2
+username	SYSTEM	user_id	0	0	exp_on_kill	300	500	class_id	1	2	name	Jedi Consular	Jedi Instructor	name	Appraise	Bluff	skill_id	1	2	name	Force Sensitive	Weapon Group Pistols	Iron Will	character_id	1	1	2	2	name	Personal Lightsaber	Personal Short Lightsaber	medpack	credits	damage	4d8-1	3d8+4d8	equipment_id	1	3	4	name	Jedi Cloak	name	Basic	Ryl	Huttese	language_id	1	2	3	1
+		level	12	17	currency_on_kill	500	500				description						points	6	5										weight					range	2	1	amount	1	1	500	description						proficiency				
+		species																											durability_max																						
+		era	Late Jedi Civil War	Early Jedi Civil War																									level																						
+		name	Zhar Lestin	Vrook Lamar																																															
+		experience																																																	
+		str	9	10																																															
+		str_mod	-1	0																																															
+		dex	11	14																																															
+		dex_mod	0	2																																															
+		con	12	13																																															
+		con_mod	1	1																																															
+		int	15	17																																															
+		int_mod	2	3																																															
+		spr	15	15																																															
+		spr_mod	2	2																																															
+		cha	13	16																																															
+		cha_mod	1	3																																															
+		vitality	91	138																																															
+		vitality_die	d8	d10																																															
+		wound	12	13																																															
+		defense	19	25																																															
+		initiative_mod	0	2																																															
+		speed	10	6																																															
+		fortitude	8	12																																															
+		reflex	7	11																																															
+		will	11	15																																															
+		force_points	0	9																																															
+		reputation	5	7																																															
+		weapon_1_id	1	2																																															
+		weapon_2_id																																																	
+		armor_id	1	1																																															
+		faction_id																																																	

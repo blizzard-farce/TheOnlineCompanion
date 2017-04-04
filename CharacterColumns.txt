@@ -1,0 +1,29 @@
+Name
+Level
+Class
+Paragon Path
+Epic Desiny
+Total XP
+Race
+Size
+Age
+Gender
+Height
+Weight
+Alignment
+Deity
+Adventuring Company or other Affiliations
+Initiative
+Initiative Mod
+Str
+Str Mod
+Con
+Con Mod
+Dex
+Dex Mod
+Int
+Int Mod
+Wis
+Wis Mod
+Cha
+Cha Mod
