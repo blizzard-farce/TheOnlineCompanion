@@ -9,8 +9,8 @@ public partial class CharacterSheet_Home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        String userName = Request.QueryString["user"];
-
+        String userID = Request.QueryString["user"];
+        TextBox1.Text = 
         
     }
 }
