@@ -4,8 +4,8 @@
     <title>asdf</title>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    Character Name:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DNDConnectionString %>" DeleteCommand="DELETE FROM [CHARACTER] WHERE [CHARACTER_ID] = ?" InsertCommand="INSERT INTO [CHARACTER] ([CHARACTER_ID], [USER_ID], [LEVEL], [SPECIES_ID], [NAME], [EXPERIENCE], [ARMOR_ID], [FACTION_ID]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" ProviderName="<%$ ConnectionStrings:DNDConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [CHARACTER] WHERE ([USER_ID] = ?)" UpdateCommand="UPDATE [CHARACTER] SET [USER_ID] = ?, [LEVEL] = ?, [SPECIES_ID] = ?, [NAME] = ?, [EXPERIENCE] = ?, [ARMOR_ID] = ?, [FACTION_ID] = ? WHERE [CHARACTER_ID] = ?">
+    Character Name:<asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DNDConnectionString %>" DeleteCommand="DELETE FROM CHARACTER WHERE CHARACTER_ID = ?" InsertCommand="INSERT INTO CHARACTER (CHARACTER_ID, USER_ID, LEVEL, SPECIES_ID, NAME, EXPERIENCE, ARMOR_ID, FACTION_ID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" ProviderName="<%$ ConnectionStrings:DNDConnectionString.ProviderName %>" SelectCommand="SELECT * FROM CHARACTER WHERE (USER_ID = ?)" UpdateCommand="UPDATE CHARACTER SET USER_ID = ?, LEVEL = ?, SPECIES_ID = ?, NAME = ?, EXPERIENCE = ?, ARMOR_ID = ?, FACTION_ID = ? WHERE CHARACTER_ID = ?">
         <DeleteParameters>
             <asp:Parameter Name="CHARACTER_ID" Type="Int32" />
         </DeleteParameters>
