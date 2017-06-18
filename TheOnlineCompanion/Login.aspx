@@ -33,8 +33,8 @@
             <asp:Panel ID="registerPanel" runat="server" Visible="False" Width="256px">
                 <asp:DetailsView ID="registerView" runat="server" DataSourceID="AccountCreateSource" Height="50px" Width="125px" AutoGenerateRows="False" DefaultMode="Insert">
                     <Fields>
-                        <asp:BoundField DataField="USER" HeaderText="Username:" />
-                        <asp:BoundField DataField="PASS" HeaderText="Password:" />
+                        <asp:BoundField DataField="USERNAME" HeaderText="Username:" />
+                        <asp:BoundField DataField="PASSWORD" HeaderText="Password:" />
                         <asp:BoundField DataField="EMAIL" HeaderText="Email:" />
                         <asp:CommandField InsertText="Create Account" ShowCancelButton="False" ShowInsertButton="True" />
                     </Fields>
@@ -42,13 +42,13 @@
                 <!-- do not delete Label8, it is required for error reporting -->
                 <!-- error reporting will be added eventually -->
                 <asp:Label ID="Label8" runat="server"></asp:Label>
-                <asp:SqlDataSource ID="AccountCreateSource" runat="server" ConnectionString="<%$ ConnectionStrings:DNDConnectionString %>" InsertCommand="INSERT INTO LOGIN (USER, PASS, EMAIL) VALUES (?, ?, ?)" ProviderName="<%$ ConnectionStrings:DNDConnectionString.ProviderName %>" SelectCommand="SELECT * FROM LOGIN" >
+                <asp:SqlDataSource ID="AccountCreateSource" runat="server" ConnectionString="<%$ ConnectionStrings:DNDConnectionString %>" InsertCommand="INSERT INTO USER (USERNAME, PASSWORD, EMAIL) VALUES (?, ?, ?)" ProviderName="<%$ ConnectionStrings:DNDConnectionString.ProviderName %>" SelectCommand="SELECT * FROM USER" >
                     <DeleteParameters>
                         <asp:Parameter Name="USER_ID" Type="Int32" />
                     </DeleteParameters>
                     <InsertParameters>
-                        <asp:Parameter Name="USER" Type="String" />
-                        <asp:Parameter Name="PASS" Type="String" />
+                        <asp:Parameter Name="USERNAME" Type="String" />
+                        <asp:Parameter Name="PASSWORD" Type="String" />
                         <asp:Parameter Name="EMAIL" Type="String" />
                     </InsertParameters>
                 </asp:SqlDataSource>
@@ -58,7 +58,7 @@
             </asp:Panel>
 			<asp:DetailsView ID="DetailsView1" runat="server" DataSourceID="SqlDataSource1" Height="50px" Width="125px" Visible="False">
             </asp:DetailsView>
-			<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DNDConnectionString %>" ProviderName="<%$ ConnectionStrings:DNDConnectionString.ProviderName %>" SelectCommand="SELECT * FROM LOGIN WHERE (USER = ?)">
+			<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DNDConnectionString %>" ProviderName="<%$ ConnectionStrings:DNDConnectionString.ProviderName %>" SelectCommand="SELECT * FROM USER WHERE (USERNAME = ?)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="UsernameBox" Name="USER" PropertyName="Text" Type="String" />
                 </SelectParameters>

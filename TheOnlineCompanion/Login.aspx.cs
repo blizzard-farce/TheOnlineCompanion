@@ -56,13 +56,14 @@ public partial class Login : System.Web.UI.Page
 
             //these take the username and password pulled from the database and read them into strings
             string testUsername = DetailsView1.Rows[1].Cells[1].Text.ToString();
-            string testPassword = DetailsView1.Rows[2].Cells[1].Text.ToString();
+            string testPassword = DetailsView1.Rows[3].Cells[1].Text.ToString();
+            
 
             //this test checks to see if the entered username and password are correct
             if (userName == testUsername && password == testPassword)
             {
                 //if yes, redirect to the character sheet
-                Response.Redirect("/CharacterSheet/Home.aspx?user="+userName);
+                Response.Redirect("/CharacterSheet/Home.aspx?user="+DetailsView1.Rows[0].Cells[1].Text);
             }
             else if (password != testPassword)
             {
