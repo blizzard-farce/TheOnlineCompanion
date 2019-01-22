@@ -7,7 +7,10 @@ import java.io.PrintWriter;
 import java.net.*;
 import java.util.Scanner;
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -33,8 +36,16 @@ public class Client extends Application
 	{
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Hello World!");
-		StackPane root = new StackPane();
-        primaryStage.setScene(new Scene(root, 300, 250));
+		//StackPane root = new StackPane();
+		
+        GridPane grid = new GridPane();
+        grid.setAlignment(Pos.CENTER);
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(25, 25, 25, 25));
+        
+        primaryStage.setScene(new Scene(grid, 300, 250));
+        
         primaryStage.show();
 	}
 	
