@@ -9,9 +9,13 @@ import java.util.Scanner;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Client extends Application
@@ -46,7 +50,24 @@ public class Client extends Application
         
         primaryStage.setScene(new Scene(grid, 300, 250));
         
+        Text address = new Text("Host Name: ");
+        address.setText("Host Name:");
+        Text port = new Text("Port:");
+        TextField addressField = new TextField();
+        TextField portField = new TextField();
+        
+        Button submitButton = new Button("Submit");
+        
+        
+        grid.add(address, 0, 0);
+        grid.add(port, 0, 1);
+        grid.add(addressField, 1, 0);
+        grid.add(portField, 1, 1);
+        grid.add(submitButton, 0, 2);
+        
         primaryStage.show();
+        
+        
 	}
 	
 	public static void clientOps(String hostName, int port)
